@@ -1,0 +1,15 @@
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\obj\Debug\Mechatronika w medycynie.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\Mechatronika w medycynie.exe.config
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\Mechatronika w medycynie.exe
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\Mechatronika w medycynie.pdb
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\CsvHelper.dll
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\CsvHelper.xml
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\obj\Debug\Mechatronika w medycynie.csproj.CopyComplete
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\obj\Debug\Mechatronika w medycynie.exe
+C:\Users\Dell\source\repos\Mechatronika w medycynie\Mechatronika w medycynie\obj\Debug\Mechatronika w medycynie.pdb
