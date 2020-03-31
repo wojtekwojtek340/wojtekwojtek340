@@ -1,0 +1,6 @@
+﻿  Ciezarowy.cpp
+  Osobowy.cpp
+  main.cpp
+  pojazd.cpp
+  Generowanie kodu...
+LINK : fatal error LNK1561: punkt wejścia musi być zdefiniowany

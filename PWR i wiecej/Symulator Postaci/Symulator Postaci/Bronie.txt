@@ -1,0 +1,44 @@
+BRONIE
+14
+Wiedzminski miecz stalowy
+20
+4
+Ard'aenye
+250
+50
+Ceremonialny miecz z Deithwen
+150
+30
+D'yaebl
+150
+30
+Elfi miecz z Gor Sinych
+40
+8
+Gwalhir
+300
+60
+Harvall
+150
+30
+Miecz Zakonu
+35
+7
+Nielegalny miecz
+35
+7
+Runiczny Sihill z Mahakamu
+100
+30
+Swiecony miecz Zakonu
+50
+10
+Temerski miecz zelazny
+20
+4
+Runiczny miecz z Dol Blathanna
+100
+50
+Zardzewialy miecz
+10
+2

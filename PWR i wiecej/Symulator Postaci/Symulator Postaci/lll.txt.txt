@@ -1,0 +1,19 @@
+SAVE
+400
+400
+35
+35
+6
+140
+2700
+0
+3
+21
+2
+Temerski miecz zelazny
+20
+4
+Wiedzminski miecz stalowy
+20
+4
+1

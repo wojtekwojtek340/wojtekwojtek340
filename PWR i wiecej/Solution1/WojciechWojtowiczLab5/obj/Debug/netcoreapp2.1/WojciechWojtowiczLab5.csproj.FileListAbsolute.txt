@@ -1,0 +1,6 @@
+C:\Users\Dell\source\repos\Solution1\WojciechWojtowiczLab5\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab5.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\Solution1\WojciechWojtowiczLab5\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab5.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Solution1\WojciechWojtowiczLab5\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab5.RazorAssemblyInfo.cache
+C:\Users\Dell\source\repos\Solution1\WojciechWojtowiczLab5\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab5.RazorAssemblyInfo.cs
+C:\Users\Dell\source\repos\Solution1\WojciechWojtowiczLab5\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab5.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\Solution1\WojciechWojtowiczLab5\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab5.AssemblyInfo.cs

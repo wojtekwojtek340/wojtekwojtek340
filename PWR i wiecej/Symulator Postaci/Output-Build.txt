@@ -1,0 +1,7 @@
+﻿1>------ Build started: Project: Symulator Postaci, Configuration: Debug x64 ------
+1>Gracz.cpp
+1>c:\users\dell\source\repos\symulator postaci\symulator postaci\gracz.cpp(162): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+1>c:\users\dell\source\repos\symulator postaci\symulator postaci\gracz.cpp(181): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+1>Symulator Postaci.vcxproj -> C:\Users\Dell\source\repos\Symulator Postaci\x64\Debug\Symulator Postaci.exe
+1>Done building project "Symulator Postaci.vcxproj".
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

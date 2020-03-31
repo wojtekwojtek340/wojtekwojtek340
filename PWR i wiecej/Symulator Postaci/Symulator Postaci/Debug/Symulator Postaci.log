@@ -1,0 +1,7 @@
+﻿  Gracz.cpp
+c:\users\dell\source\repos\symulator postaci\symulator postaci\gracz.cpp(158): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  Lochy.cpp
+c:\users\dell\source\repos\symulator postaci\symulator postaci\lochy.cpp(129): warning C4101: "blad": lokalna zmienna, do której nie istnieje odwołanie
+c:\users\dell\source\repos\symulator postaci\symulator postaci\lochy.cpp(200): warning C4101: "blad": lokalna zmienna, do której nie istnieje odwołanie
+  Generowanie kodu...
+  Symulator Postaci.vcxproj -> C:\Users\Dell\source\repos\Symulator Postaci\Debug\Symulator Postaci.exe

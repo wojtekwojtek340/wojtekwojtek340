@@ -1,0 +1,11 @@
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\bin\Debug\WojciechWojtowiczLab1Zadanie.exe.config
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\bin\Debug\WojciechWojtowiczLab1Zadanie.exe
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\bin\Debug\WojciechWojtowiczLab1Zadanie.pdb
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\obj\Debug\WojciechWojtowiczLab1Zadanie.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\obj\Debug\WojciechWojtowiczLab1Zadanie.Properties.Resources.resources
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\obj\Debug\WojciechWojtowiczLab1Zadanie.csproj.GenerateResource.cache
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\obj\Debug\WojciechWojtowiczLab1Zadanie.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\obj\Debug\WojciechWojtowiczLab1Zadanie.exe
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\obj\Debug\WojciechWojtowiczLab1Zadanie.pdb
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\obj\Debug\WojciechWojtowiczLab1Zadanie.FormMain.resources
+C:\Users\Dell\source\repos\WojciechWojtowiczLab1Zadanie\WojciechWojtowiczLab1Zadanie\obj\Debug\WojciechWojtowiczLab1Zadanie.FormExtractionInfo.resources

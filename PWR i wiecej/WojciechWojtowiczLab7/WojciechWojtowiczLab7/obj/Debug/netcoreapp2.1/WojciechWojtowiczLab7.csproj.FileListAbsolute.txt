@@ -1,0 +1,14 @@
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\bin\Debug\netcoreapp2.1\WojciechWojtowiczLab7.deps.json
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\bin\Debug\netcoreapp2.1\WojciechWojtowiczLab7.runtimeconfig.json
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\bin\Debug\netcoreapp2.1\WojciechWojtowiczLab7.runtimeconfig.dev.json
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\bin\Debug\netcoreapp2.1\WojciechWojtowiczLab7.dll
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab7.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab7.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab7.RazorAssemblyInfo.cache
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab7.RazorAssemblyInfo.cs
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab7.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab7.AssemblyInfo.cs
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab7.RazorTargetAssemblyInfo.cache
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\bin\Debug\netcoreapp2.1\WojciechWojtowiczLab7.pdb
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab7.dll
+C:\Users\Dell\source\repos\WojciechWojtowiczLab7\WojciechWojtowiczLab7\obj\Debug\netcoreapp2.1\WojciechWojtowiczLab7.pdb

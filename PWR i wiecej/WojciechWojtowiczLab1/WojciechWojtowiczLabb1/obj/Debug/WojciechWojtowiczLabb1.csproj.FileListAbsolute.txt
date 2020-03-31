@@ -1,0 +1,10 @@
+C:\Users\Dell\source\repos\WojciechWojtowiczLabb1\WojciechWojtowiczLabb1\bin\Debug\WojciechWojtowiczLabb1.exe.config
+C:\Users\Dell\source\repos\WojciechWojtowiczLabb1\WojciechWojtowiczLabb1\bin\Debug\WojciechWojtowiczLabb1.exe
+C:\Users\Dell\source\repos\WojciechWojtowiczLabb1\WojciechWojtowiczLabb1\bin\Debug\WojciechWojtowiczLabb1.pdb
+C:\Users\Dell\source\repos\WojciechWojtowiczLabb1\WojciechWojtowiczLabb1\obj\Debug\WojciechWojtowiczLabb1.Properties.Resources.resources
+C:\Users\Dell\source\repos\WojciechWojtowiczLabb1\WojciechWojtowiczLabb1\obj\Debug\WojciechWojtowiczLabb1.csproj.GenerateResource.cache
+C:\Users\Dell\source\repos\WojciechWojtowiczLabb1\WojciechWojtowiczLabb1\obj\Debug\WojciechWojtowiczLabb1.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\WojciechWojtowiczLabb1\WojciechWojtowiczLabb1\obj\Debug\WojciechWojtowiczLabb1.exe
+C:\Users\Dell\source\repos\WojciechWojtowiczLabb1\WojciechWojtowiczLabb1\obj\Debug\WojciechWojtowiczLabb1.pdb
+C:\Users\Dell\source\repos\WojciechWojtowiczLabb1\WojciechWojtowiczLabb1\obj\Debug\WojciechWojtowiczLabb1.FormMain.resources
+C:\Users\Dell\source\repos\WojciechWojtowiczLabb1\WojciechWojtowiczLabb1\obj\Debug\WojciechWojtowiczLabb1.FormAbout.resources

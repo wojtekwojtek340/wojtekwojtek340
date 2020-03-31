@@ -1,0 +1,9 @@
+C:\Users\Dell\source\repos\egzamintest\egzamintest\bin\Debug\egzamintest.exe.config
+C:\Users\Dell\source\repos\egzamintest\egzamintest\bin\Debug\egzamintest.exe
+C:\Users\Dell\source\repos\egzamintest\egzamintest\bin\Debug\egzamintest.pdb
+C:\Users\Dell\source\repos\egzamintest\egzamintest\obj\Debug\egzamintest.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\egzamintest\egzamintest\obj\Debug\egzamintest.Form1.resources
+C:\Users\Dell\source\repos\egzamintest\egzamintest\obj\Debug\egzamintest.Properties.Resources.resources
+C:\Users\Dell\source\repos\egzamintest\egzamintest\obj\Debug\egzamintest.csproj.GenerateResource.cache
+C:\Users\Dell\source\repos\egzamintest\egzamintest\obj\Debug\egzamintest.exe
+C:\Users\Dell\source\repos\egzamintest\egzamintest\obj\Debug\egzamintest.pdb
