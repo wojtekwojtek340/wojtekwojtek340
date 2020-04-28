@@ -20,7 +20,14 @@ namespace Obsługa_Poczty_V2
         public Odbiorcza()
         {            
             InitializeComponent();
-            GetData();
+            try
+            {
+                GetData();
+            }
+            catch(System.Data.SqlClient.SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         public void KsiążkaStart(Nadawcza _wysłane_Odebrane, Osoby _osoby)

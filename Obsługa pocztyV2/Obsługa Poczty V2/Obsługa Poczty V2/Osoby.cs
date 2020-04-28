@@ -63,6 +63,7 @@ namespace Obsługa_Poczty_V2
         {
             using (var conn = connectionBaza())
             {
+                conn.BeginTransaction();
                 conn.Open();
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Osoby", conn))
