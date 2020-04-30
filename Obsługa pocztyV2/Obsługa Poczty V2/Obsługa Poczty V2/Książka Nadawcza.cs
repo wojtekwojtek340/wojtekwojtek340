@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Obsługa_Poczty_V2
@@ -15,35 +9,44 @@ namespace Obsługa_Poczty_V2
     public partial class Nadawcza : Form
     {
         //StringComparison comparison = StringComparison.OrdinalIgnoreCase;
-        readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
-        Odbiorcza książka = new Odbiorcza();
-        Osoby osoby = new Osoby();
+        private readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
+        private readonly Odbiorcza książka = new Odbiorcza();
+        private readonly Osoby osoby = new Osoby();
         public Nadawcza()
         {
             InitializeComponent();
             książka.KsiążkaStart(this, osoby);
             osoby.OsobyStart(this, książka);
-            GetData();
+            try
+            {
+                GetData();
+            }
+            catch (System.Data.SqlClient.SqlException e)
+            {
+                MessageBox.Show(e.Message);
+                DataTable table = new DataTable();
+                dataGridViewOsoby.DataSource = table;
+            }
         }
 
         private void osobyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            osoby.DesktopLocation = this.Location;
-            osoby.Size = this.Size;
+            Hide();
+            osoby.DesktopLocation = Location;
+            osoby.Size = Size;
             osoby.Show();
         }
 
         private void książkaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            książka.DesktopLocation = this.Location;
-            książka.Size = this.Size;
+            Hide();
+            książka.DesktopLocation = Location;
+            książka.Size = Size;
             książka.Show();
         }
         public void GetData()
         {
-            using (var conn = connectionBaza())
+            using (SqlConnection conn = connectionBaza())
             {
                 conn.Open();
 
@@ -60,7 +63,16 @@ namespace Obsługa_Poczty_V2
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            DodawaniePozycji dodawaniePozycji = new DodawaniePozycji(this);
+            DodawaniePozycji dodawaniePozycji = null;
+            try
+            {
+                dodawaniePozycji = new DodawaniePozycji(this);
+            }
+            catch (System.Data.SqlClient.SqlException e2)
+            {
+                MessageBox.Show(e2.Message);
+                return;
+            }
             dodawaniePozycji.Show();
         }
 

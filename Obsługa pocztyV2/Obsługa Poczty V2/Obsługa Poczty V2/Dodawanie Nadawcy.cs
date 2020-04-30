@@ -1,31 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Obsługa_Poczty_V2
 {
     public partial class DodawaniePozycji : Form
     {
-        readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
-        Dodawanie dodawanie = new Dodawanie();
-        System.Object okno = null;
-        public DodawaniePozycji(System.Object _okno)
+        private readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
+        private readonly Dodawanie dodawanie = new Dodawanie();
+        private readonly object okno = null;
+        public DodawaniePozycji(object _okno)
         {
             InitializeComponent();
-            GetData();
+            try
+            {
+                GetData();
+            }
+            catch (System.Data.SqlClient.SqlException e)
+            {
+                throw e;
+            }
             okno = _okno;
         }
-        void GetData()
+
+        private void GetData()
         {
-            using (var conn = connectionBaza())
+            using (SqlConnection conn = connectionBaza())
             {
                 conn.Open();
 
@@ -45,7 +47,7 @@ namespace Obsługa_Poczty_V2
             {
                 DodawaniePozycji2 dodawaniePozycji2 = new DodawaniePozycji2(this, dodawanie, okno);
                 dodawaniePozycji2.Show();
-                this.Hide();
+                Hide();
             }
             else
             {
@@ -54,7 +56,7 @@ namespace Obsługa_Poczty_V2
                     dodawanie.nadawca = dataGridViewOsoby.Rows[0];
                     DodawaniePozycji2 dodawaniePozycji2 = new DodawaniePozycji2(this, dodawanie, okno);
                     dodawaniePozycji2.Show();
-                    this.Hide();
+                    Hide();
                 }
                 else
                 {
@@ -66,12 +68,12 @@ namespace Obsługa_Poczty_V2
 
         private void dataGridViewOsoby_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
+
             if (e.RowIndex >= 0)
             {
-                dodawanie.nadawca = dataGridViewOsoby.Rows[e.RowIndex];                
+                dodawanie.nadawca = dataGridViewOsoby.Rows[e.RowIndex];
             }
-            
+
         }
     }
 }

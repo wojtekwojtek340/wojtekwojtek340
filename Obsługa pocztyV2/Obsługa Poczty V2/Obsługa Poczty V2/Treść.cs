@@ -1,26 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Obsługa_Poczty_V2
 {
     public partial class Treść : Form
     {
-        DodawaniePozycji dodawaniePozycji = null;
-        DodawaniePozycji2 dodawaniePozycji2 = null;
-        Dodawanie dodawanie = null;
-        readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
-        System.Object okno = null;
+        private readonly DodawaniePozycji dodawaniePozycji = null;
+        private readonly DodawaniePozycji2 dodawaniePozycji2 = null;
+        private readonly Dodawanie dodawanie = null;
+        private readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
+        private readonly object okno = null;
 
-        public Treść(DodawaniePozycji _dodawaniePozycji, DodawaniePozycji2 _dodawaniePozycji2, Dodawanie _dodawanie, System.Object _okno)
+        public Treść(DodawaniePozycji _dodawaniePozycji, DodawaniePozycji2 _dodawaniePozycji2, Dodawanie _dodawanie, object _okno)
         {
             okno = _okno;
             dodawaniePozycji = _dodawaniePozycji;
@@ -38,7 +31,7 @@ namespace Obsługa_Poczty_V2
             {
                 string query = "INSERT INTO [Nadawcza] ([Nadawca], [Odbiorca], [Treść], [Data]) VALUES (@Nadawca, @Odbiorca, @Treść, @Data)";
 
-                using (var con = connectionBaza())
+                using (SqlConnection con = connectionBaza())
                 {
                     con.Open();
                     SqlCommand queryString = new SqlCommand(query, con);
@@ -55,11 +48,11 @@ namespace Obsługa_Poczty_V2
                 akcja.GetData();
             }
 
-            else if(okno.GetType().Name == "Książka")
+            else if (okno.GetType().Name == "Książka")
             {
                 string query = "INSERT INTO [Odbiorcza] ([Nadawca], [Odbiorca], [Treść], [Data]) VALUES (@Nadawca, @Odbiorca, @Treść, @Data)";
 
-                using (var con = connectionBaza())
+                using (SqlConnection con = connectionBaza())
                 {
                     con.Open();
                     SqlCommand queryString = new SqlCommand(query, con);
@@ -78,7 +71,7 @@ namespace Obsługa_Poczty_V2
 
             dodawaniePozycji.Close();
             dodawaniePozycji2.Close();
-            this.Close();
+            Close();
         }
     }
 }

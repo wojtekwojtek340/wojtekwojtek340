@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Obsługa_Poczty_V2
 {
@@ -19,9 +14,6 @@ namespace Obsługa_Poczty_V2
             odbiorca = null;
             tresc = null;
         }
-
-        
-        
 
     }
 }

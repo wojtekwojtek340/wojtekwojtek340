@@ -1,30 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Obsługa_Poczty_V2
 {
     public partial class Osoby : Form
     {
-        readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
-        Nadawcza wysłane_Odebrane = null;
-        Odbiorcza książka = null;
-        StringComparison comparison = StringComparison.OrdinalIgnoreCase;
-        DataGridViewRow row = null;
-        int index = 0;
+        private readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
+        private Nadawcza wysłane_Odebrane = null;
+        private Odbiorcza książka = null;
+        private readonly StringComparison comparison = StringComparison.OrdinalIgnoreCase;
+        private DataGridViewRow row = null;
+        private int index = 0;
         public Osoby()
-        {          
+        {
             InitializeComponent();
             Shown += delegate { dataGridViewOsoby3.ClearSelection(); };
-            GetData();            
+            try
+            {
+                GetData();
+            }
+            catch (System.Data.SqlClient.SqlException e)
+            {
+                MessageBox.Show(e.Message);
+                DataTable table = new DataTable();
+                dataGridViewOsoby3.DataSource = table;
+            }
         }
 
         public void OsobyStart(Nadawcza _wysłane_Odebrane, Odbiorcza _książka)
@@ -35,17 +38,17 @@ namespace Obsługa_Poczty_V2
 
         private void książkaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            książka.DesktopLocation = this.Location;
-            książka.Size = this.Size;
+            Hide();
+            książka.DesktopLocation = Location;
+            książka.Size = Size;
             książka.Show();
         }
 
         private void wysłaneOdebraneToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            wysłane_Odebrane.DesktopLocation = this.Location;
-            wysłane_Odebrane.Size = this.Size;
+            Hide();
+            wysłane_Odebrane.DesktopLocation = Location;
+            wysłane_Odebrane.Size = Size;
             wysłane_Odebrane.Show();
         }
 
@@ -56,14 +59,14 @@ namespace Obsługa_Poczty_V2
 
         private void Osoby_Load(object sender, EventArgs e)
         {
-            this.Location = wysłane_Odebrane.DesktopLocation;
-            this.Size = wysłane_Odebrane.Size;
+            Location = wysłane_Odebrane.DesktopLocation;
+            Size = wysłane_Odebrane.Size;
         }
-        void GetData()
+
+        private void GetData()
         {
-            using (var conn = connectionBaza())
+            using (SqlConnection conn = connectionBaza())
             {
-                conn.BeginTransaction();
                 conn.Open();
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Osoby", conn))
@@ -76,7 +79,7 @@ namespace Obsługa_Poczty_V2
             }
         }
 
-        void szukaj(string text, int number)
+        private void szukaj(string text, int number)
         {
             CurrencyManager currencyManager = (CurrencyManager)BindingContext[dataGridViewOsoby3.DataSource];
 
@@ -100,7 +103,7 @@ namespace Obsługa_Poczty_V2
             if (e.RowIndex >= 0)
             {
                 row = dataGridViewOsoby3.Rows[e.RowIndex];
-                index = Int32.Parse(row.Cells[0].Value.ToString());
+                index = int.Parse(row.Cells[0].Value.ToString());
                 textBoxName.Text = row.Cells[1].Value.ToString();
                 textBoxTown.Text = row.Cells[2].Value.ToString();
                 textBoxStreet.Text = row.Cells[3].Value.ToString();
@@ -124,9 +127,17 @@ namespace Obsługa_Poczty_V2
         {
             string query = "INSERT INTO [Osoby] ([Imię Nazwisko | Nazwa firmy], [Miasto], [Ulica], [Numer domu], [Numer lokalu], [Kod pocztowy]) VALUES (@Nazwa, @Miasto, @Ulica, @Numer1, @Numer2, @Kod)";
 
-            using (var con = connectionBaza())
+            using (SqlConnection con = connectionBaza())
             {
-                con.Open();
+                try
+                {
+                    con.Open();
+                }
+                catch (System.Data.SqlClient.SqlException e2)
+                {
+                    MessageBox.Show(e2.Message);
+                    return;
+                }
                 SqlCommand queryString = new SqlCommand(query, con);
                 queryString.Parameters.Add(new SqlParameter("@Nazwa", textBoxName.Text));
                 queryString.Parameters.Add(new SqlParameter("@Miasto", textBoxTown.Text));
@@ -139,7 +150,7 @@ namespace Obsługa_Poczty_V2
             }
             GetData();
             row = dataGridViewOsoby3.Rows[dataGridViewOsoby3.Rows.Count - 1];
-            index = Int32.Parse(row.Cells[0].Value.ToString());
+            index = int.Parse(row.Cells[0].Value.ToString());
             dataGridViewOsoby3.Rows[dataGridViewOsoby3.Rows.Count - 1].Selected = true;
         }
 
@@ -150,7 +161,7 @@ namespace Obsługa_Poczty_V2
                 string query = "UPDATE Osoby SET Nazwa = @Nazwa, ";
                 string query4 = "Adres = @Adres WHERE Id = " + index;
                 string queerytest = query + query4;
-                using (var con = connectionBaza())
+                using (SqlConnection con = connectionBaza())
                 {
                     con.Open();
                     SqlCommand queryString = new SqlCommand(queerytest, con);
@@ -171,12 +182,12 @@ namespace Obsługa_Poczty_V2
         {
             if (row != null)
             {
-                using (var con = connectionBaza())
+                using (SqlConnection con = connectionBaza())
                 {
                     con.Open();
 
                     using (SqlDataAdapter adapter = new SqlDataAdapter("DELETE FROM Osoby WHERE Id = " + index, con))
-                    {                        
+                    {
                         DataTable table = new DataTable();
                         adapter.Fill(table);
                         GetData();

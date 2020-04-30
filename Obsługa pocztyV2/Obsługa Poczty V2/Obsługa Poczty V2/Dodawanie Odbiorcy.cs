@@ -1,27 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Obsługa_Poczty_V2
 {
     public partial class DodawaniePozycji2 : Form
     {
-        readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
-        DodawaniePozycji dodawaniePozycji = null;
-        Dodawanie dodawanie = null;
-        System.Object okno = null;
-        public DodawaniePozycji2(DodawaniePozycji _dodawaniePozycji, Dodawanie _dodawanie, System.Object _okno)
+        private readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
+        private readonly DodawaniePozycji dodawaniePozycji = null;
+        private readonly Dodawanie dodawanie = null;
+        private readonly object okno = null;
+        public DodawaniePozycji2(DodawaniePozycji _dodawaniePozycji, Dodawanie _dodawanie, object _okno)
         {
             InitializeComponent();
-            GetData();            
+            try
+            {
+                GetData();
+            }
+            catch (System.Data.SqlClient.SqlException e)
+            {
+                MessageBox.Show(e.Message);
+                DataTable table = new DataTable();
+                dataGridViewOsoby.DataSource = table;
+            }
             dodawaniePozycji = _dodawaniePozycji;
             dodawanie = _dodawanie;
             okno = _okno;
@@ -29,12 +32,13 @@ namespace Obsługa_Poczty_V2
 
         private void DodawaniePozycji2_Load(object sender, EventArgs e)
         {
-            this.Location = dodawaniePozycji.DesktopLocation;
-            this.Size = dodawaniePozycji.Size;
+            Location = dodawaniePozycji.DesktopLocation;
+            Size = dodawaniePozycji.Size;
         }
-        void GetData()
+
+        private void GetData()
         {
-            using (var conn = connectionBaza())
+            using (SqlConnection conn = connectionBaza())
             {
                 conn.Open();
 
@@ -54,7 +58,7 @@ namespace Obsługa_Poczty_V2
             {
                 Treść treść = new Treść(dodawaniePozycji, this, dodawanie, okno);
                 treść.Show();
-                this.Hide();
+                Hide();
             }
             else
             {
@@ -63,13 +67,13 @@ namespace Obsługa_Poczty_V2
                     dodawanie.odbiorca = dataGridViewOsoby.Rows[0];
                     Treść treść = new Treść(dodawaniePozycji, this, dodawanie, okno);
                     treść.Show();
-                    this.Hide();
+                    Hide();
                 }
                 else
                 {
                     MessageBox.Show("Proszę dodać pozycję.");
                 }
-            }           
+            }
         }
 
         private void dataGridViewOsoby_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
