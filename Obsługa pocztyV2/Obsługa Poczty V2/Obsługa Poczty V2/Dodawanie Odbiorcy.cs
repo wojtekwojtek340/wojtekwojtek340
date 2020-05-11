@@ -83,5 +83,13 @@ namespace Obsługa_Poczty_V2
                 dodawanie.odbiorca = dataGridViewOsoby.Rows[e.RowIndex];
             }
         }
+
+        private void DodawaniePozycji2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(dodawaniePozycji != null)
+            {
+                dodawaniePozycji.Close();
+            }
+        }
     }
 }

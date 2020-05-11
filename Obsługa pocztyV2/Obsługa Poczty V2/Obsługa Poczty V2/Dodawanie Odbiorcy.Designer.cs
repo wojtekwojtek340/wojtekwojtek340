@@ -144,6 +144,8 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(967, 246);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 345);
@@ -156,7 +158,11 @@
             // 
             this.dataGridViewOsoby.AllowUserToAddRows = false;
             this.dataGridViewOsoby.AllowUserToDeleteRows = false;
+            this.dataGridViewOsoby.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewOsoby.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewOsoby.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOsoby.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOsoby.Location = new System.Drawing.Point(12, 246);
             this.dataGridViewOsoby.MultiSelect = false;
@@ -181,8 +187,7 @@
             // 
             // DodawaniePozycji2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1082, 603);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -200,7 +205,8 @@
             this.Controls.Add(this.dataGridViewOsoby);
             this.Controls.Add(this.label1);
             this.Name = "DodawaniePozycji2";
-            this.Text = "DodawaniePozycji2";
+            this.Text = "Dodawanie Odbiorcy";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DodawaniePozycji2_FormClosing);
             this.Load += new System.EventHandler(this.DodawaniePozycji2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOsoby)).EndInit();
             this.ResumeLayout(false);

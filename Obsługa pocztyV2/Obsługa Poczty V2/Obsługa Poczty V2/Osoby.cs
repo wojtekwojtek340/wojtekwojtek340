@@ -158,19 +158,32 @@ namespace Obsługa_Poczty_V2
         {
             if (row != null)
             {
-                string query = "UPDATE Osoby SET Nazwa = @Nazwa, ";
-                string query4 = "Adres = @Adres WHERE Id = " + index;
-                string queerytest = query + query4;
+                string query = "UPDATE Osoby SET [Imię Nazwisko | Nazwa firmy] = @Nazwa, ";
+                string query2 = "Miasto = @Miasto, ";
+                string query3 = "Ulica = @Ulica, ";
+                string query4 = "[Numer domu] = @Numer1, ";
+                string query5 = "[Numer lokalu] = @Numer2, ";
+                string query6 = "[Kod pocztowy] = @Kod ";
+                string query7 = "WHERE Id = " + index;
+
+
+                string queerytest = query + query2 + query3 + query4 + query5 + query6 + query7;
                 using (SqlConnection con = connectionBaza())
                 {
                     con.Open();
                     SqlCommand queryString = new SqlCommand(queerytest, con);
                     queryString.Parameters.Add(new SqlParameter("@Nazwa", textBoxName.Text));
-                    //queryString.Parameters.Add(new SqlParameter("@Adres", textBoxAdress.Text));
+                    queryString.Parameters.Add(new SqlParameter("@Miasto", textBoxTown.Text));
+                    queryString.Parameters.Add(new SqlParameter("@Ulica", textBoxStreet.Text));
+                    queryString.Parameters.Add(new SqlParameter("@Numer1", textBoxHouseNumber1.Text));
+                    queryString.Parameters.Add(new SqlParameter("@Numer2", textBoxHouseNumber2.Text));
+                    queryString.Parameters.Add(new SqlParameter("@Kod", textBoxPostCode.Text));
                     queryString.ExecuteNonQuery();
-                    GetData();
                     con.Close();
                 }
+                GetData();
+                row = null;
+                dataGridViewOsoby3.ClearSelection();
             }
             else
             {
@@ -191,9 +204,9 @@ namespace Obsługa_Poczty_V2
                         DataTable table = new DataTable();
                         adapter.Fill(table);
                         GetData();
-                        dataGridViewOsoby3.ClearSelection();
                     }
                     con.Close();
+                    dataGridViewOsoby3.ClearSelection();
                 }
                 row = null;
             }
@@ -210,7 +223,7 @@ namespace Obsługa_Poczty_V2
 
         private void textBoxTown2_TextChanged(object sender, EventArgs e)
         {
-            szukaj(textBoxTown.Text, 2);
+            szukaj(textBoxTown2.Text, 2);
         }
 
         private void textBoxStreet2_TextChanged(object sender, EventArgs e)

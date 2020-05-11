@@ -11,9 +11,12 @@ namespace Obsługa_Poczty_V2
         private readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
         private Nadawcza wysłane_Odebrane = null;
         private Osoby osoby = null;
+        public DataGridViewRow row = null;
+        public int index;
         public Odbiorcza()
         {
             InitializeComponent();
+            Shown += delegate { dataGridViewOsoby3.ClearSelection(); };
             try
             {
                 GetData();

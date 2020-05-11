@@ -34,6 +34,7 @@
             this.książkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewOsoby = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOsoby)).BeginInit();
@@ -77,30 +78,48 @@
             // dataGridViewOsoby
             // 
             this.dataGridViewOsoby.AllowUserToAddRows = false;
+            this.dataGridViewOsoby.AllowUserToDeleteRows = false;
             this.dataGridViewOsoby.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewOsoby.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewOsoby.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOsoby.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOsoby.Location = new System.Drawing.Point(12, 204);
+            this.dataGridViewOsoby.MultiSelect = false;
             this.dataGridViewOsoby.Name = "dataGridViewOsoby";
+            this.dataGridViewOsoby.ReadOnly = true;
             this.dataGridViewOsoby.RowHeadersWidth = 51;
             this.dataGridViewOsoby.RowTemplate.Height = 24;
+            this.dataGridViewOsoby.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewOsoby.Size = new System.Drawing.Size(821, 235);
             this.dataGridViewOsoby.TabIndex = 0;
+            this.dataGridViewOsoby.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewOsoby_CellMouseClick);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Controls.Add(this.buttonAdd);
             this.panel1.Location = new System.Drawing.Point(12, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(821, 167);
             this.panel1.TabIndex = 4;
             // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(281, 61);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(137, 56);
+            this.buttonDelete.TabIndex = 15;
+            this.buttonDelete.Text = "Usuń";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(213, 61);
+            this.buttonAdd.Location = new System.Drawing.Point(116, 61);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(137, 56);
             this.buttonAdd.TabIndex = 0;
@@ -118,7 +137,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Nadawcza";
-            this.Text = "Akcja";
+            this.Text = "Książka Nadawcza";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOsoby)).EndInit();
@@ -134,9 +153,10 @@
         private System.Windows.Forms.ToolStripMenuItem wysłaneOdebraneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem osobyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem książkaToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridViewOsoby;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonDelete;
+        public System.Windows.Forms.DataGridView dataGridViewOsoby;
     }
 }
 
