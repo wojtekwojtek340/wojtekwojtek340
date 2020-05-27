@@ -1,0 +1,14 @@
+﻿  main.cpp
+  Scene.cpp
+  Solid.cpp
+C:\Users\wojte\OneDrive\Pulpit\IPZ2-20200527T185901Z-001\IPZ2\Solid.cpp(18,22): warning C4305: "=": obcięcie z "double" do "float"
+C:\Users\wojte\OneDrive\Pulpit\IPZ2-20200527T185901Z-001\IPZ2\Solid.cpp(79,8): warning C4101: "funkcja": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\wojte\OneDrive\Pulpit\IPZ2-20200527T185901Z-001\IPZ2\Solid.cpp(173,18): warning C4018: ">": niezgodność typu ze znakiem/bez znaku
+C:\Users\wojte\OneDrive\Pulpit\IPZ2-20200527T185901Z-001\IPZ2\Solid.cpp(177,18): warning C4018: ">": niezgodność typu ze znakiem/bez znaku
+C:\Users\wojte\OneDrive\Pulpit\IPZ2-20200527T185901Z-001\IPZ2\Solid.cpp(183,18): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\wojte\OneDrive\Pulpit\IPZ2-20200527T185901Z-001\IPZ2\Solid.cpp(187,18): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  StLReader.cpp
+C:\Users\wojte\OneDrive\Pulpit\IPZ2-20200527T185901Z-001\IPZ2\StLReader.cpp(151,19): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  Triangle.cpp
+  Generowanie kodu...
+  Slicer.vcxproj -> C:\Users\wojte\source\repos\Slicer\Debug\Slicer.exe

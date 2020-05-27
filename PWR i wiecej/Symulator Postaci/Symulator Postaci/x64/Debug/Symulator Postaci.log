@@ -1,16 +1,1 @@
-﻿  Boss.cpp
-  Bron.cpp
-  Gracz.cpp
-c:\users\dell\source\repos\symulator postaci\symulator postaci\gracz.cpp(162): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\dell\source\repos\symulator postaci\symulator postaci\gracz.cpp(181): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Komunikacja.cpp
-  Lochy.cpp
-c:\users\dell\source\repos\symulator postaci\symulator postaci\lochy.cpp(133): warning C4101: 'blad': unreferenced local variable
-c:\users\dell\source\repos\symulator postaci\symulator postaci\lochy.cpp(194): warning C4101: 'blad': unreferenced local variable
-  Main.cpp
-c:\users\dell\source\repos\symulator postaci\symulator postaci\main.cpp(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Menu.cpp
-  Pajak.cpp
-  Szkielet.cpp
-  Generating Code...
-  Symulator Postaci.vcxproj -> C:\Users\Dell\source\repos\Symulator Postaci\x64\Debug\Symulator Postaci.exe
+﻿  Symulator Postaci.vcxproj -> C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\PWR i wiecej\Symulator Postaci\x64\Debug\Symulator Postaci.exe
