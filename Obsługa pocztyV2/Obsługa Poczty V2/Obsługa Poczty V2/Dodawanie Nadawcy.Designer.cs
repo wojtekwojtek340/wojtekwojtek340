@@ -64,6 +64,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewOsoby.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewOsoby.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOsoby.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOsoby.Location = new System.Drawing.Point(12, 246);
             this.dataGridViewOsoby.MultiSelect = false;
@@ -204,7 +205,7 @@
             this.Controls.Add(this.dataGridViewOsoby);
             this.Controls.Add(this.label1);
             this.Name = "DodawaniePozycji";
-            this.Text = "DodawaniePozycji";
+            this.Text = "Dodawanie Nadawcy";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOsoby)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

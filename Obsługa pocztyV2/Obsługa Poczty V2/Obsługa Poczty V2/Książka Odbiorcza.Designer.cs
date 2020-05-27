@@ -40,6 +40,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewOsoby3 = new System.Windows.Forms.DataGridView();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOsoby3)).BeginInit();
@@ -83,6 +84,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Controls.Add(this.buttonAdd);
             this.panel1.Controls.Add(this.buttonPrint);
             this.panel1.Controls.Add(this.labelTo);
@@ -98,7 +100,7 @@
             // 
             this.buttonAdd.Location = new System.Drawing.Point(74, 65);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(132, 55);
+            this.buttonAdd.Size = new System.Drawing.Size(137, 55);
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "Dodaj pozycje";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -147,16 +149,32 @@
             // 
             // dataGridViewOsoby3
             // 
+            this.dataGridViewOsoby3.AllowUserToAddRows = false;
+            this.dataGridViewOsoby3.AllowUserToDeleteRows = false;
             this.dataGridViewOsoby3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewOsoby3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewOsoby3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOsoby3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOsoby3.Location = new System.Drawing.Point(12, 204);
+            this.dataGridViewOsoby3.MultiSelect = false;
             this.dataGridViewOsoby3.Name = "dataGridViewOsoby3";
+            this.dataGridViewOsoby3.ReadOnly = true;
             this.dataGridViewOsoby3.RowHeadersWidth = 51;
             this.dataGridViewOsoby3.RowTemplate.Height = 24;
+            this.dataGridViewOsoby3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewOsoby3.Size = new System.Drawing.Size(821, 234);
             this.dataGridViewOsoby3.TabIndex = 7;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(227, 65);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(137, 55);
+            this.buttonDelete.TabIndex = 16;
+            this.buttonDelete.Text = "Usuń";
+            this.buttonDelete.UseVisualStyleBackColor = true;
             // 
             // Odbiorcza
             // 
@@ -167,7 +185,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Odbiorcza";
-            this.Text = "Książka";
+            this.Text = "Książka Odbiorcza";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Książka_FormClosed);
             this.Load += new System.EventHandler(this.Książka_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -187,12 +205,13 @@
         private System.Windows.Forms.ToolStripMenuItem osobyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem książkaToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridViewOsoby3;
         private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.Label labelTo;
         private System.Windows.Forms.Label labelFrom;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePickerFrom;
         private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonDelete;
+        public System.Windows.Forms.DataGridView dataGridViewOsoby3;
     }
 }

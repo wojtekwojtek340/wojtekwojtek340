@@ -27,3 +27,17 @@ C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty
 C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa Poczty V2.csproj.CoreCompileInputs.cache
 C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa Poczty V2.exe
 C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa Poczty V2.pdb
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\bin\Debug\Obsługa Poczty V2.exe.config
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\bin\Debug\Obsługa Poczty V2.exe
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\bin\Debug\Obsługa Poczty V2.pdb
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa Poczty V2.csprojAssemblyReference.cache
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa_Poczty_V2.DodawaniePozycji.resources
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa_Poczty_V2.DodawaniePozycji2.resources
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa_Poczty_V2.Odbiorcza.resources
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa_Poczty_V2.Osoby.resources
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa_Poczty_V2.Properties.Resources.resources
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa_Poczty_V2.Nadawcza.resources
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa_Poczty_V2.Treść.resources
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa Poczty V2.csproj.GenerateResource.cache
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa Poczty V2.exe
+C:\Users\Dell\Documents\GitHub\wojtekwojtek340\Obsługa pocztyV2\Obsługa Poczty V2\Obsługa Poczty V2\obj\Debug\Obsługa Poczty V2.pdb

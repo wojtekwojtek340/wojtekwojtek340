@@ -12,9 +12,12 @@ namespace Obsługa_Poczty_V2
         private readonly Func<SqlConnection> connectionBaza = () => new SqlConnection(ConfigurationManager.ConnectionStrings["Baza"].ConnectionString);
         private readonly Odbiorcza książka = new Odbiorcza();
         private readonly Osoby osoby = new Osoby();
+        public DataGridViewRow row = null;
+        public int index;
         public Nadawcza()
         {
             InitializeComponent();
+            Shown += delegate { dataGridViewOsoby.ClearSelection(); };
             książka.KsiążkaStart(this, osoby);
             osoby.OsobyStart(this, książka);
             try
@@ -74,6 +77,40 @@ namespace Obsługa_Poczty_V2
                 return;
             }
             dodawaniePozycji.Show();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (row != null)
+            {
+                using (SqlConnection con = connectionBaza())
+                {
+                    con.Open();
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter("DELETE FROM Nadawcza WHERE Id = " + index, con))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+                        GetData();
+                    }
+                    con.Close();
+                    dataGridViewOsoby.ClearSelection();
+                }
+                row = null;
+            }
+            else
+            {
+                MessageBox.Show("Proszę zaznaczyć wiersz!");
+            }
+        }
+
+        private void dataGridViewOsoby_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                row = dataGridViewOsoby.Rows[e.RowIndex];
+                index = int.Parse(row.Cells[0].Value.ToString());
+            }
         }
 
         //private void textBoxNameS_TextChanged(object sender, EventArgs e)

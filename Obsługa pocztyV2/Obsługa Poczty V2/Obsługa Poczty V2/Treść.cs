@@ -27,7 +27,9 @@ namespace Obsługa_Poczty_V2
             dodawanie.tresc = richTextBox1.Text;
             dodawanie.tresc.Replace("\n", " ");
 
-            if (okno.GetType().Name == "Akcja")
+            var test = okno.GetType().Name;
+
+            if (okno.GetType().Name == "Nadawcza")
             {
                 string query = "INSERT INTO [Nadawcza] ([Nadawca], [Odbiorca], [Treść], [Data]) VALUES (@Nadawca, @Odbiorca, @Treść, @Data)";
 
@@ -46,9 +48,13 @@ namespace Obsługa_Poczty_V2
                 Nadawcza akcja = new Nadawcza();
                 akcja = (Nadawcza)okno;
                 akcja.GetData();
+                akcja.dataGridViewOsoby.Rows[akcja.dataGridViewOsoby.Rows.Count - 1].Selected = true;
+                akcja.row = akcja.dataGridViewOsoby.Rows[akcja.dataGridViewOsoby.Rows.Count - 1];
+                akcja.index = int.Parse(akcja.row.Cells[0].Value.ToString());
+                Close();
             }
 
-            else if (okno.GetType().Name == "Książka")
+            else if (okno.GetType().Name == "Odbiorcza")
             {
                 string query = "INSERT INTO [Odbiorcza] ([Nadawca], [Odbiorca], [Treść], [Data]) VALUES (@Nadawca, @Odbiorca, @Treść, @Data)";
 
@@ -67,11 +73,17 @@ namespace Obsługa_Poczty_V2
                 Odbiorcza książka = new Odbiorcza();
                 książka = (Odbiorcza)okno;
                 książka.GetData();
+                książka.dataGridViewOsoby3.Rows[książka.dataGridViewOsoby3.Rows.Count - 1].Selected = true;
+                książka.row = książka.dataGridViewOsoby3.Rows[książka.dataGridViewOsoby3.Rows.Count - 1];
+                książka.index = int.Parse(książka.row.Cells[0].Value.ToString());
+                Close();
             }
+        }
 
+        private void Treść_FormClosing(object sender, FormClosingEventArgs e)
+        {
             dodawaniePozycji.Close();
             dodawaniePozycji2.Close();
-            Close();
         }
     }
 }
