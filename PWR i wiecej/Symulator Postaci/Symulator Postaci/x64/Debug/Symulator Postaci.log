@@ -1,1 +1,17 @@
-﻿  Symulator Postaci.vcxproj -> C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\PWR i wiecej\Symulator Postaci\x64\Debug\Symulator Postaci.exe
+﻿  Boss.cpp
+  Bron.cpp
+  Gracz.cpp
+C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\PWR i wiecej\Symulator Postaci\Symulator Postaci\Gracz.cpp(162,60): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\PWR i wiecej\Symulator Postaci\Symulator Postaci\Gracz.cpp(181,25): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Komunikacja.cpp
+  Lochy.cpp
+C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\PWR i wiecej\Symulator Postaci\Symulator Postaci\Lochy.cpp(133,26): warning C4101: 'blad': unreferenced local variable
+C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\PWR i wiecej\Symulator Postaci\Symulator Postaci\Lochy.cpp(194,25): warning C4101: 'blad': unreferenced local variable
+  Main.cpp
+C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\PWR i wiecej\Symulator Postaci\Symulator Postaci\Main.cpp(9,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Menu.cpp
+C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\PWR i wiecej\Symulator Postaci\Symulator Postaci\Menu.cpp(254,15): warning C4834: discarding return value of function with 'nodiscard' attribute
+  Pajak.cpp
+  Szkielet.cpp
+  Generating Code...
+  Symulator Postaci.vcxproj -> C:\Users\wojte\OneDrive\Pulpit\wojtekwojtek340\PWR i wiecej\Symulator Postaci\x64\Debug\Symulator Postaci.exe
